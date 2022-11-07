@@ -22,18 +22,22 @@ export default function Carreiras() {
 
     return (
 
-        <div className="w-full  
+        <div className="w-full  flex flex-col
                 h-screen bg-background bg-no-repeat bg-cover ">
             <NavBar />
-            <div className="flex justify-center  flex-col mt-4">
+            
+            <div className="flex justify-center  flex-col ">
+
+                    <div className="mx-auto p-4 bg-black/20  rounded-3xl 
+                    text-4xl text-primaryBlue font-semibold">Conheça nossos Cursos</div>
 
                 <div className="flex items-center justify-center w-full">
                     {/* Caroucel */}
-                    <div ref={refCaroucel} className=" border w-full mx-12 h-5/6 
+                    <div ref={refCaroucel} className=" border w-full mx-12 
                                 flex items-center
                                 overflow-x-auto scroll-smooth
                                 ">
-                        
+                        {/* Cards */}
                         <div className="flex">
                             {/* passar via props os Dados */}
                             <Card/>
@@ -49,7 +53,7 @@ export default function Carreiras() {
                     
                     
                 </div>
-
+                {/* Botoes */}
                 <div className="flex w-full mt-2 ">
                     <div className="flex mx-auto gap-8 text-5xl text-secondaryGreen">
                         <button onClick={handleLeftClick} className="w-12 h-12  ">
