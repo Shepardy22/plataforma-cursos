@@ -23,8 +23,7 @@ export default function Carreiras() {
     return (
 
         <div className="w-full  flex flex-col
-                h-screen bg-background bg-no-repeat bg-cover ">
-            <NavBar />
+                h-screen  ">
             
             <div className="flex justify-center  flex-col ">
 

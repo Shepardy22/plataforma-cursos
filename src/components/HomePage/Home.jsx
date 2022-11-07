@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import NavBar from "../NavBar";
 
 export default function Home (){
     return(
         <>
          <div className=" w-full  flex flex-col
-            h-screen bg-background bg-no-repeat bg-cover">
-                <NavBar />
+            h-screen ">
             {/* Cards Middle */}
             <div className="flex flex-col  items-center sm:flex-row
                 sm:justify-around sm:items-center sm:space-x-10">
@@ -15,7 +13,7 @@ export default function Home (){
                     mt-8
                     rounded-2xl
                     h-56 w-64
-                    backdrop-opacity-10 backdrop-invert bg-primaryCinza/20
+                     bg-primaryCinza/40
                     
                     sm:w-1/3 sm:h-96 
                     ">
@@ -36,12 +34,10 @@ export default function Home (){
                         h-52 w-64
                         backdrop-opacity-10 backdrop-invert bg-secondaryCinza/60
 
-                        
                         sm:w-1/3 sm:h-64
                         sm:mt-46
                         sm:ml-8
 
-                        
                         "> 
                         <div className="flex ">
                            
