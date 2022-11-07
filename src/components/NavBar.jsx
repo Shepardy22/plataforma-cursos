@@ -20,18 +20,18 @@ export default function NavBar() {
         <>
             
 
-        <div className="h-24  w-full 
+        <div className="h-24  w-full fixed top-0 z-50
             backdrop-opacity-10 backdrop-invert bg-black/70 
             flex justify-between  items-center
             ">
-            <Link to={'/'}><img src={Logo}alt="Logo" className='' width={100}/></Link>
+            <Link to={'/'}><img src={Logo}alt="Logo" className='' width={90}/></Link>
             {/* Menu Desktop */}
             <div className=' flex mx-auto w-full'>
                 <ul className='text-white hidden sm:flex w-full justify-around text-xl'>
-                    <li className='hover:text-primaryBlue'><Link to="/">Home</Link></li>
-                    <li className='hover:text-primaryBlue'><Link to="/Carreiras">Carreiras</Link></li>
-                    <li className='hover:text-primaryBlue'><Link to="/">Ensino</Link></li>
-                    <li className='hover:text-primaryBlue'><Link to="/">Comunidade</Link></li>
+                    <li className='hover:text-primaryBlue '><Link to="/">Home</Link></li>
+                    <li className='hover:text-primaryBlue '><Link to="/Carreiras">Carreiras</Link></li>
+                    <li className='hover:text-primaryBlue '><Link to="/">Ensino</Link></li>
+                    <li className='hover:text-primaryBlue '><Link to="/">Comunidade</Link></li>
 
                     <div className='flex '>
                         <li className=''>

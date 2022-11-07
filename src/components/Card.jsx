@@ -19,7 +19,7 @@ export default function Card(){
                     <button className='font-semibold bg-primaryBlue
                         hover:bg-secondaryGreen hover:text-primaryBlue
                         rounded-3xl w-36 h-8 text-secondaryGreen  mt-8 mb-4'>
-                        Login
+                        Saiba Mais
                     </button>
                 </div>
             </div>

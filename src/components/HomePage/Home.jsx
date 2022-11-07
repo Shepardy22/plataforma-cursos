@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Typewriter } from 'react-simple-typewriter'
 
 export default function Home (){
     return(
@@ -6,8 +7,8 @@ export default function Home (){
          <div className=" w-full  flex flex-col
             h-screen ">
             {/* Cards Middle */}
-            <div className="flex flex-col  items-center sm:flex-row
-                sm:justify-around sm:items-center sm:space-x-10">
+            <div className="flex flex-col  items-center sm:flex-row my-auto
+                sm:justify-around  sm:space-x-10">
                 {/* primeiro Texto */}
                 <div className="
                     mt-8

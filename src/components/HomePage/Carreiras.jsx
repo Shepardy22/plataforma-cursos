@@ -22,10 +22,10 @@ export default function Carreiras() {
 
     return (
 
-        <div className="w-full  flex flex-col
+        <div className="w-full  flex flex-col 
                 h-screen  ">
             
-            <div className="flex justify-center  flex-col ">
+            <div className="flex justify-center  flex-col my-auto">
 
                     <div className="mx-auto p-4 bg-black/20  rounded-3xl 
                     text-4xl text-primaryBlue font-semibold">Conheça nossos Cursos</div>
@@ -79,7 +79,7 @@ export default function Carreiras() {
                     </button>
                 </Link>
             </div>
-
+            
             
         </div>
 
