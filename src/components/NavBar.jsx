@@ -24,7 +24,7 @@ export default function NavBar() {
             <div className=' flex mx-auto w-full'>
                 <ul className='text-white hidden sm:flex w-full justify-around text-xl'>
                     <li className='hover:text-primaryBlue'><a href="/">Home</a></li>
-                    <li className='hover:text-primaryBlue'><a href="/">Carreiras</a></li>
+                    <li className='hover:text-primaryBlue'><a href="#Carreiras">Carreiras</a></li>
                     <li className='hover:text-primaryBlue'><a href="/">Ensino</a></li>
                     <li className='hover:text-primaryBlue'><a href="/">Comunidade</a></li>
 
