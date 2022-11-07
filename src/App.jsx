@@ -1,14 +1,22 @@
 import Carreiras from "./components/HomePage/Carreiras";
 import Home from "./components/HomePage/Home";
-import NavBar from "./components/NavBar";
+
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="h-screen bg-background bg-no-repeat bg-cover">
-      <NavBar />
-      <Home/>
-      <Carreiras/>
+    <div className="">
+      
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/carreiras" element={<Carreiras/>}/>
+
+        </Routes>
+      </Router>
+      
+      
       
     </div>
   );

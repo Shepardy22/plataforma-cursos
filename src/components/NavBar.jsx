@@ -1,5 +1,6 @@
 import Logo from '../assets/img/Logo.png';
 import {FaBars, FaWindowClose} from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 
 import { useState } from 'react';
 
@@ -23,10 +24,10 @@ export default function NavBar() {
 
             <div className=' flex mx-auto w-full'>
                 <ul className='text-white hidden sm:flex w-full justify-around text-xl'>
-                    <li className='hover:text-primaryBlue'><a href="/">Home</a></li>
-                    <li className='hover:text-primaryBlue'><a href="#Carreiras">Carreiras</a></li>
-                    <li className='hover:text-primaryBlue'><a href="/">Ensino</a></li>
-                    <li className='hover:text-primaryBlue'><a href="/">Comunidade</a></li>
+                    <li className='hover:text-primaryBlue'><Link to="/">Home</Link></li>
+                    <li className='hover:text-primaryBlue'><Link to="/Carreiras">Carreiras</Link></li>
+                    <li className='hover:text-primaryBlue'><Link to="/">Ensino</Link></li>
+                    <li className='hover:text-primaryBlue'><Link to="/">Comunidade</Link></li>
 
                     <div className='flex '>
                         <li className=''>

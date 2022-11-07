@@ -1,7 +1,13 @@
+import { Link } from "react-router-dom";
+import NavBar from "../NavBar";
+
 export default function Home (){
     return(
-        <div className=" w-full">
-            {/* Cards */}
+        <>
+         <div className=" w-full  flex flex-col
+            h-screen bg-background bg-no-repeat bg-cover">
+                <NavBar />
+            {/* Cards Middle */}
             <div className="flex flex-col  items-center sm:flex-row
                 sm:justify-around sm:items-center sm:space-x-10">
                 {/* primeiro Texto */}
@@ -50,17 +56,23 @@ export default function Home (){
                 </div>
             </div>
 
-            <div className="h-24  w-full mt-16
-            backdrop-opacity-10 backdrop-invert bg-black/70 
-            flex justify-center items-center
-            ">
-                <div className="border rounded-xl border-secondaryGreen" id="Carreiras">
-                    <h2 className="text-2xl text-primaryBlue font-semibold p-2">
-                        Explore nossas Carreiras
-                    </h2>
-                </div>
+            {/* Divisor Carreiras */}
+            <div className="h-24  w-full mt-16 fixed bottom-0
+                backdrop-opacity-10 backdrop-invert bg-black/70 
+                flex justify-center items-center">
+
+                <Link to={"/Carreiras"}>
+                    <button className="border rounded-xl border-secondaryGreen" id="Carreiras">
+                        <h2 className="text-lg text-primaryBlue font-semibold p-2">
+                            Explore nossas Carreiras
+                        </h2>
+                    </button>
+                </Link>
             </div>
 
         </div>
+        
+        </>
+       
     )
 }
