@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useRef } from "react";
-import NavBar from "../NavBar";
 import Card from "../Card";
 
 import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa';

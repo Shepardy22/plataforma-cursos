@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter'
 
 export default function Home (){
+
+    // function handleDone () {
+    //     console.log('Done!')
+    // }
+    
     return(
         <>
          <div className=" w-full  flex flex-col
@@ -15,6 +20,7 @@ export default function Home (){
                     rounded-2xl
                     h-56 w-64
                      bg-primaryCinza/40
+                     
                     
                     sm:w-1/3 sm:h-96 
                     ">
@@ -23,8 +29,22 @@ export default function Home (){
                     sm:text-6xl sm:mt-10 sm:mb-10
                     ">
                         <p className="font-semibold mt-2
-                        sm:mt-12 ">
-                            Sua carreira Começa <br /><span className="text-secondaryGreen ">Aqui!</span>
+                        sm:mt-8 ">Sua carreira Começa 
+                            <br />
+
+                            <span className="text-secondaryGreen ">
+                                <Typewriter
+                                    words={['Aqui', 'Agora', 'Hoje!']}
+                                    loop={3}
+                                    cursor
+                                    cursorStyle='|'
+                                    typeSpeed={100}
+                                    deleteSpeed={50}
+                                    delaySpeed={1000}
+                                    //onLoopDone={handleDone}
+                                />
+                                </span>
+                                
                         </p>
                     </div>
                 </div>
@@ -42,10 +62,10 @@ export default function Home (){
                         "> 
                         <div className="flex ">
                            
-                            <p className="text-center text-secondaryGreen font-semibold m-2
-                                 
-                                ">
-                                Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo desafio profissional, evoluindo em comunidade com os melhores experts.
+                            <p className="text-center text-secondaryGreen font-semibold m-2">
+                                
+                                    Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo e encare seu novo desafio profissional, evoluindo em comunidade com os melhores experts.
+                                
                             </p>
                           
                         </div>

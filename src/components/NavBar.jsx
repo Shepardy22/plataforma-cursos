@@ -68,7 +68,7 @@ export default function NavBar() {
         </div>
         {/* Menu Mobile */}
         <div className= {`${showMenu ? '':'hidden'}
-            z-10    
+            z-50    
             sm:hidden fixed top-0 right-0 w-8/12 h-4/6
            bg-black/90
             border border-secondaryGreen rounded-l-3xl
