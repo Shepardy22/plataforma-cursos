@@ -45,7 +45,7 @@ export default function Carreiras() {
 
                 <div className="flex items-center justify-center w-full">
                     {/* Caroucel */}
-                    <div ref={refCaroucel} className=" border w-full mx-12 
+                    <div ref={refCaroucel} className=" border w-full mx-2 
                                 flex items-center
                                 overflow-x-auto scroll-smooth
                                 ">
