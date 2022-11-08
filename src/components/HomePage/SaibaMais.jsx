@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import Card from "../Card";
 
 
+
+
+
 export default function SaibaMais() {
 
     const { id } = useParams();
@@ -12,7 +15,7 @@ export default function SaibaMais() {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/Cursos/${id}`, {
+        fetch(`https://my-json-server.typicode.com/Shepardy22/plataforma-cursos/Cursos/${id}`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -46,7 +49,7 @@ export default function SaibaMais() {
                 {/* Card Curso e Descrição */}
                 <div className="  bg-black/50 flex flex-col items-center sm:flex-row  ">
 
-                    <Card key={1} curso={curso} />
+                    <Card key={1} curso={curso} nomeButton='Começar' />
 
                     <div className="h-full sm:h-40 text-white text-lg text-center mx-auto px-4">
                         {descricao && descricao.map((desc) => (
@@ -69,8 +72,8 @@ export default function SaibaMais() {
                             
                             <ul className="justify-around  flex ">
                                 {tecnologias && tecnologias.map((tec) => (
-                                    <li key={tec} className="text-white text-lg bg-slate-500 w-20 h-20 mx-1">
-                                        {tec}
+                                    <li key={tec} className="text-white text-lg  w-20 h-20 mx-1">
+                                        <img src={`../tecnologias/${tec}.png`} alt={tec} />
                                     </li>))}
                             </ul>
                     

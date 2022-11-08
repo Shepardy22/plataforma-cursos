@@ -2,14 +2,14 @@
     "Cursos": [
         {
             "id": 1,
-            "nome": "Curso 1",
-            "formacao1": "Descrição do curso 1",
-            "formacao2": "Descrição do curso 1",
-            "formacao3": "Descrição do curso 1",
-            "aulas": 124,
-            "projetos": 124,
+            "nome": "HTML 5",
+            "formacao1": "Formação Front-End",
+            "formacao2": "Tecnicas de SEO",
+            "formacao3": "Semantica",
+            "aulas": 48,
+            "projetos": 12,
             "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
-            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "Node.js", "React", "Angular"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
             "categoria": {
                 "id": 1,
                 "nome": "Categoria 1"
@@ -17,12 +17,14 @@
         },
         {
             "id": 2,
-            "nome": "Curso 2",
-            "formacao1": "Descrição do curso 2",
-            "formacao2": "Descrição do curso 2",
-            "formacao3": "Descrição do curso 2",
-            "aulas": 124,
-            "projetos": 124,
+            "nome": "CSS 3",
+            "formacao1": "Design Responsivo",
+            "formacao2": "Introdução ao Figma",
+            "formacao3": "Flexbox",
+            "aulas": 32,
+            "projetos": 18,
+            "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
             "categoria": {
                 "id": 1,
                 "nome": "Categoria 1"
@@ -30,12 +32,14 @@
         },
         {
             "id": 3,
-            "nome": "Curso 3",
-            "formacao1": "Descrição do curso 3",
-            "formacao2": "Descrição do curso 3",
-            "formacao3": "Descrição do curso 3",
-            "aulas": 124,
-            "projetos": 124,
+            "nome": "JavaScript",
+            "formacao1": "Introdução ao JS",
+            "formacao2": "Algortimos",
+            "formacao3": "Lógica ",
+            "aulas": 52,
+            "projetos": 48,
+            "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
             "categoria": {
                 "id": 2,
                 "nome": "Categoria 2"
@@ -43,16 +47,49 @@
         },
         {
             "id": 4,
-            "nome": "HTML",
-            "formacao1": "Descrição do curso 4",
-            "formacao2": "Descrição do curso 4",
-            "formacao3": "Descrição do curso 4",
+            "nome": "Node JS",
+            "formacao1": "Intro NodeJS",
+            "formacao2": "Banco de Dados",
+            "formacao3": "API REST",
+            "aulas": 15,
+            "projetos": 8,
+            "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        },
+        {
+            "id": 5,
+            "nome": "React JS",
+            "formacao1": "Intro React JS",
+            "formacao2": "Hooks",
+            "formacao3": "Context API",
+            "aulas": 62,
+            "projetos": 54,
+            "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        },
+        {
+            "id": 6,
+            "nome": "Angular",
+            "formacao1": "Intro ao Angular",
+            "formacao2": "Angular Material",
+            "formacao3": "Angular Universal",
             "aulas": 124,
             "projetos": 124,
+            "descricao": ["Formação completa para desenvolvimento Front-end:",  "Nível básico ao Avançado.", "Aulas Online diariamente", "+ 148 Aulas bônus gravadas", "+42 projetos para validar conhecimentos", "Interação com a comunidade Suporte ao Aluno"],
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "NodeJS", "ReactJS", "Angular"],
             "categoria": {
                 "id": 2,
                 "nome": "Categoria 2"
             }
         }
+        
     ]
 }

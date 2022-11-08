@@ -53,7 +53,7 @@ export default function Carreiras() {
                         <div className="flex">
                             {/* passar via props os Dados */}
                             {cursos.map((curso) => (
-                                <Card key={curso.id} curso={curso}/>
+                                <Card key={curso.id} curso={curso} nomeButton='Saiba Mais'/>
                             ))}
                             
                         </div>
