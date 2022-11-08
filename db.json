@@ -1,0 +1,56 @@
+{
+    "Cursos": [
+        {
+            "id": 1,
+            "nome": "Curso 1",
+            "formacao1": "Descrição do curso 1",
+            "formacao2": "Descrição do curso 1",
+            "formacao3": "Descrição do curso 1",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 1,
+                "nome": "Categoria 1"
+            }
+        },
+        {
+            "id": 2,
+            "nome": "Curso 2",
+            "formacao1": "Descrição do curso 2",
+            "formacao2": "Descrição do curso 2",
+            "formacao3": "Descrição do curso 2",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 1,
+                "nome": "Categoria 1"
+            }
+        },
+        {
+            "id": 3,
+            "nome": "Curso 3",
+            "formacao1": "Descrição do curso 3",
+            "formacao2": "Descrição do curso 3",
+            "formacao3": "Descrição do curso 3",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        },
+        {
+            "id": 4,
+            "nome": "Curso 4",
+            "formacao1": "Descrição do curso 4",
+            "formacao2": "Descrição do curso 4",
+            "formacao3": "Descrição do curso 4",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        }
+    ]
+}
