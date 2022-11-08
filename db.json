@@ -1,32 +1,57 @@
-[
-    {
-        "id": "1",
-        "Curso": "Curso 1",
-        "AUlas": "12"
-    },
-    {
-        "id": "2",
-        "Curso": "Curso 2",
-        "AUlas": "10"
-    },
-    {
-        "id": "3",
-        "Curso": "Curso 3",
-        "AUlas": "8"
-    },
-    {
-        "id": "4",
-        "Curso": "Curso 4",
-        "AUlas": "6"
-    },
-    {
-        "id": "5",
-        "Curso": "Curso 5",
-        "AUlas": "4"
-    },
-    {
-        "id": "6",
-        "Curso": "Curso 6",
-        "AUlas": "2"
-    }
-]
+
+{
+    "Cursos": [
+        {
+            "id": 1,
+            "nome": "Curso 1",
+            "formacao1": "Descrição do curso 1",
+            "formacao2": "Descrição do curso 1",
+            "formacao3": "Descrição do curso 1",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 1,
+                "nome": "Categoria 1"
+            }
+        },
+        {
+            "id": 2,
+            "nome": "Curso 2",
+            "formacao1": "Descrição do curso 2",
+            "formacao2": "Descrição do curso 2",
+            "formacao3": "Descrição do curso 2",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 1,
+                "nome": "Categoria 1"
+            }
+        },
+        {
+            "id": 3,
+            "nome": "Curso 3",
+            "formacao1": "Descrição do curso 3",
+            "formacao2": "Descrição do curso 3",
+            "formacao3": "Descrição do curso 3",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        },
+        {
+            "id": 4,
+            "nome": "Curso 4",
+            "formacao1": "Descrição do curso 4",
+            "formacao2": "Descrição do curso 4",
+            "formacao3": "Descrição do curso 4",
+            "aulas": 124,
+            "projetos": 124,
+            "categoria": {
+                "id": 2,
+                "nome": "Categoria 2"
+            }
+        }
+    ]
+}
