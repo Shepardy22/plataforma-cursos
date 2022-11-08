@@ -1,7 +1,7 @@
 export default function Card(){
     return (
         <div className="border border-secondaryGreen
-            m-2 p-1 w-48
+            m-2 p-1 w-52
             drop-shadow-2xl rounded-xl">
 
             <div className="drop-shadow-xl rounded-2xl bg-secondaryGreen/80 h-full">

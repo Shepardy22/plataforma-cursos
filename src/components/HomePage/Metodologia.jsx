@@ -7,7 +7,7 @@ import { Typewriter } from 'react-simple-typewriter'
 export default function Metodologia() {
     return (
         <>
-            <div className=" flex flex-col h-full py-24">
+            <div className=" flex flex-col h-full py-24 bg-bg-Cod">
 
                 <div className="w-full  h-96 flex flex-col sm:flex-row">
                     <div className=" h-1/2 sm:h-full sm:w-1/2 flex items-center justify-center p-4 ">

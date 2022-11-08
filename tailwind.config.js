@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         "background": "url('assets/img/background.jpg')",
+        "bg-Cod": "url('assets/img/bg-Cod.jpg')",
+        "teamwork": "url('assets/img/teamwork.jpg')",
       },
       colors: {
         "primaryBlue": "#0247A7",
