@@ -1,4 +1,3 @@
-import teamwork from '../../assets/img/teamwork.jpg';
 import Divisor from '../Divisor';
 
 export default function Comunidade(){
