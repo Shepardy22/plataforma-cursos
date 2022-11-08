@@ -19,7 +19,7 @@ function App() {
             <Route path="/carreiras" element={<Carreiras/>}/>
             <Route path="/Metodologia" element={<Metodologia/>}/>
             <Route path="/Comunidade" element={<Comunidade/>}/>
-            <Route path="/Saibamais" element={<SaibaMais/>}/>
+            <Route path="/Saibamais/:id" element={<SaibaMais/>}/>
           </Routes>
 
       </Router>

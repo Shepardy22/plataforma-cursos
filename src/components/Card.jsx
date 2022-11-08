@@ -22,7 +22,7 @@ export default function Card(props){
                         <button className='font-semibold bg-primaryBlue
                             hover:bg-secondaryGreen hover:text-primaryBlue
                             rounded-3xl w-36 h-8 text-secondaryGreen  mt-8 mb-4'>
-                            <Link to={'/Saibamais'}>Saiba Mais</Link>
+                            <Link to={`/Saibamais/${props.curso.id}`}>Começar</Link>
                         </button>
                     
                 </div>

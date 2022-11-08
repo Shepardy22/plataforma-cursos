@@ -1,44 +1,101 @@
+import { useEffect, useRef, useState } from "react";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
+import { useParams } from "react-router-dom";
 import Card from "../Card";
 
-export default function SaibaMais() {
-    return (
-        <div className="h-full sm:h-screen pt-44">
-            <div className="  bg-black/60  ">
 
-                <div className="flex flex-col items-center h-full w-full sm:flex">
-                    <div className="w-72 h-full bg-black/50 sm:w-full sm:pl-24 sm:pt-12 flex flex-col sm:flex-row items-center">
-                        <Card key={1} curso={'qwe'} />
-                        
-                        <div className="h-72 sm:h-40 text-white text-lg text-center mx-auto ">
-                            <p>Formação completa Front-end:</p>
-                            <p>Nível básico ao Avançado.</p>
-                            <p>Aulas Online diariamente</p>
-                            <p>+ 148 Aulas bônus gravadas</p>
-                            <p>+42 projetos para validar conhecimentos</p>
-                            <p>Interação com a comunidade</p>
-                            <p>Suporte ao Aluno</p>
-                        
-                        </div>
+export default function SaibaMais() {
+
+    const { id } = useParams();
+    const [curso, setCurso] = useState({});
+
+
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/Cursos/${id}`, {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(response => response.json())
+            .then(data => setCurso(data))
+
+            .catch(error => console.log(error))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const descricao = curso.descricao;
+    const tecnologias = curso.tecnologias;
+
+    const refCaroucel = useRef(null);
+
+    function handleRightClick(e) {
+        e.preventDefault();
+        refCaroucel.current.scrollLeft += refCaroucel.current.offsetWidth;
+    }
+
+    function handleLeftClick(e) {
+        e.preventDefault();
+        refCaroucel.current.scrollLeft -= refCaroucel.current.offsetWidth;
+    }
+
+    return (
+        <div className=" h-screen flex items-center justify-center ">
+
+            <div className="flex flex-col items-center w-full mt-24 ">
+
+                {/* Card Curso e Descrição */}
+                <div className="  bg-black/50 flex flex-col items-center sm:flex-row  ">
+
+                    <Card key={1} curso={curso} />
+
+                    <div className="h-full sm:h-40 text-white text-lg text-center mx-auto px-4">
+                        {descricao && descricao.map((desc) => (
+                            <p key={desc}>{desc}</p>
+                        ))}
                     </div>
-                    <div className=" w-4/6 h-full bg-black/50 sm:w-full sm:h-full">
-                        <div className="hidden h-36 sm:flex flex-col items-center mt-4">
-                            <h2 className=" text-secondaryGreen font-semibold text-2xl">Tecnologias Utilizadas</h2>
-                            <div className=" bg-white w-3/4 h-16 mt-4">
-                                <ul className="flex justify-around bg-slate-700 ">
-                                    <li className="p-5">a</li>
-                                    <li className="p-5">b</li>
-                                    <li className="p-5">c</li>
-                                    <li className="p-5">d</li>
-                                    <li className="p-5">e</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
 
+                
+                {/* Tecnologias */}
+                <h2 className=" text-secondaryGreen text-2xl">Tecnologias Utilizadas</h2>
+                <div ref={refCaroucel} className="  w-6/12   h-full bg-black/20 rounded-xl p-2
+                                    flex items-center 
+                                    overflow-x-auto scroll-smooth
+                                    ">
+                            {/* Lista de Icones */}
+                            
+                        <div className="flex flex-col items-center mx-auto">
+                            
+                            <ul className="justify-around  flex ">
+                                {tecnologias && tecnologias.map((tec) => (
+                                    <li key={tec} className="text-white text-lg bg-slate-500 w-20 h-20 mx-1">
+                                        {tec}
+                                    </li>))}
+                            </ul>
+                    
+                        </div>
+                </div>
+                
 
+                {/* Botoes */}
+                <div className="h-12  w-full text-center lg:hidden">
+                            
+                    <div className="flex w-full ">
+                        <div className="flex mx-auto gap-8 text-5xl text-secondaryGreen">
+                                    <button onClick={handleLeftClick} className="w-12 h-12  ">
+                                        <FaAngleDoubleLeft />
+                                    </button>
+                                    <button onClick={handleRightClick} className="w-12 h-12  ">
+                                        <FaAngleDoubleRight />
+                                    </button>
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
+
         </div>
     )
 }
