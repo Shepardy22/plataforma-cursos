@@ -8,6 +8,8 @@
             "formacao3": "Descrição do curso 1",
             "aulas": 124,
             "projetos": 124,
+            "descricao": "Formação completa para desenvolvimento Front-end Nível básico ao Avançado.Aulas Online diariamente + 148 Aulas bônus gravadas +42 projetos para validar conhecimentos Interação com a comunidade Suporte ao Aluno",
+            "tecnologias": ["HTML5", "CSS3", "JavaScript",  "Node.js", "React", "Angular"],
             "categoria": {
                 "id": 1,
                 "nome": "Categoria 1"

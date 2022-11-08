@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Card from "../Card";
 
 import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa';
@@ -18,6 +18,20 @@ export default function Carreiras() {
         e.preventDefault();
         refCaroucel.current.scrollLeft -= refCaroucel.current.offsetWidth;
     };
+
+    const [cursos, setcursos] = useState([]);
+
+    useEffect(() => {
+        fetch('https://my-json-server.typicode.com/Shepardy22/plataforma-cursos/Cursos', {
+            method: 'GET',
+            headers: {'Content-Type': 'application/json'}})
+            .then(response => response.json())
+            .then(data => setcursos(data))
+
+            .catch(error => console.log(error))
+
+            
+    }, []);
 
     return (
 
@@ -38,13 +52,10 @@ export default function Carreiras() {
                         {/* Cards */}
                         <div className="flex">
                             {/* passar via props os Dados */}
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
+                            {cursos.map((curso) => (
+                                <Card key={curso.id} curso={curso}/>
+                            ))}
+                            
                         </div>
 
                     </div>

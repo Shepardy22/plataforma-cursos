@@ -5,6 +5,7 @@ import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import Metodologia from "./components/HomePage/Metodologia";
 import Comunidade from "./components/HomePage/Comunidade";
+import SaibaMais from "./components/HomePage/SaibaMais";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/carreiras" element={<Carreiras/>}/>
             <Route path="/Metodologia" element={<Metodologia/>}/>
             <Route path="/Comunidade" element={<Comunidade/>}/>
+            <Route path="/Saibamais" element={<SaibaMais/>}/>
           </Routes>
 
       </Router>
