@@ -1,12 +1,13 @@
 import Carreiras from "./components/HomePage/Carreiras";
 import Home from "./components/HomePage/Home";
 
-import {BrowserRouter as Router,Route,Routes, useLocation} from 'react-router-dom';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import NavBar from "./components/NavBar";
 import Metodologia from "./components/HomePage/Metodologia";
 import Comunidade from "./components/HomePage/Comunidade";
 import SaibaMais from "./components/HomePage/SaibaMais";
 import Login from "./components/HomePage/Login";
+import Cadastro from "./components/HomePage/Cadastro";
 
 
 function App() {
@@ -29,6 +30,9 @@ function App() {
             <Route path="/Comunidade" element={<Comunidade/>}/>
             <Route path="/Saibamais/:id" element={<SaibaMais/>}/>
             <Route path="/Login" element={<Login/>}/>
+            <Route path="/Cadastro" element={<Cadastro/>}/>
+
+
           </Routes>
 
       </Router>

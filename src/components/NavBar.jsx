@@ -1,6 +1,6 @@
 import Logo from '../assets/img/Logo.png';
 import {FaBars, FaWindowClose} from 'react-icons/fa';
-import {Link, useLocation, useParams} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
 
@@ -30,7 +30,9 @@ export default function NavBar() {
         <>
             
            
-        <div className= {`h-24  w-full fixed top-0 z-50          ${loc ==="/Login" && 'hidden'}
+        <div className= {`h-24  w-full fixed top-0 z-50          
+            ${loc ==="/Login"  && 'hidden'}
+            ${loc ==="/Cadastro"  && 'hidden'}
             backdrop-opacity-10 backdrop-invert bg-black/70 
             flex justify-between  items-center
             `}>
@@ -54,11 +56,13 @@ export default function NavBar() {
                             </Link>
                         </li>
                         <li className=''>
-                            <button className='font-semibold bg-primaryBlue 
-                            hover:bg-secondaryGreen hover:text-primaryBlue
-                            rounded-3xl w-32 h-8 text-secondaryGreen ml-8'>
-                                    Cadastrar
-                            </button>
+                            <Link to={'/Cadastro'}>
+                                <button className='font-semibold bg-primaryBlue
+                                hover:bg-secondaryGreen hover:text-primaryBlue
+                                rounded-3xl w-32 h-8 text-secondaryGreen ml-8'>
+                                        Cadastrar
+                                </button>
+                            </Link>
                         </li>
                     </div>
                 </ul>
@@ -104,18 +108,20 @@ export default function NavBar() {
                     <li className='mb-4 hover:text-primaryBlue'> <Link to="/Metodologia" onClick={toggleMenu}>Ensino</Link></li>
                     <li className='mb-4 hover:text-primaryBlue'> <Link to="/Comunidade"onClick={toggleMenu}>Comunidade</Link></li>
                     <li className='mb-4 hover:text-primaryBlue text-xl mt-6'>
-                        <a href="/">
+                        <Link to={'/Login'} >
                             <button className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                 Login
                             </button>
-                        </a>
+                        </Link>
                     </li>
                     <li className=' mb-2 hover:text-primaryBlue text-xl  mt-6'>
-                        <a href="/">
-                            <button className='text-shadow-xl font-semibold h-10 mt-2 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
-                                Cadastrar
-                            </button>
-                        </a>
+                        
+                        <Link to={'/Cadastro'}>
+                                <button className='text-shadow-xl font-semibold h-10 mt-2 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
+                                    Cadastrar
+                                </button>
+                        </Link>
+                        
                     </li>
                 </ul>
             </div>

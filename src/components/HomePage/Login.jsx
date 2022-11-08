@@ -3,6 +3,8 @@ import Logo from'../../assets/img/Logo.png';
 import googleLogo from'../../assets/img/googleLogo.png';
 import gitLogo from'../../assets/img/gitLogo.png';
 
+import {FaEnvelope} from 'react-icons/fa';
+
 
 
 
@@ -38,13 +40,13 @@ export default function Login() {
 
                     {/* Formulário */}
                     <div className=" h-4/6 sm:w-full sm:h-full font-play py-6 px-14 ">
-                        <div className='bg-slate-600/60 h-full w-full rounded-2xl p-4'>
+                        <div className='bg-slate-600/60 h-full w-full rounded-2xl p-4 '>
 
-                                <div className='flex flex-col  h-full justify-around '>
+                                <div className='flex flex-col  h-full justify-around  '>
 
                                     {/* Inputs */}
                                     <div className=' flex flex-col h-3/6 '>
-                                        <input type="text" className='bg-black/70 rounded-xl mb-4 h-3/6 text-sm text-white sm:h-16 pl-4' placeholder=' Digite Seu e-mail'/>
+                                        <input type="text" className='bg-black/70 rounded-xl mb-4 h-3/6 text-sm text-white sm:h-16 pl-4' placeholder= {`Digite Seu e-mail`}/>
                                         <input type="text" className='bg-black/70 rounded-xl  h-3/6 text-sm text-white sm:h-16 pl-4' placeholder=' Digite sua senha'/>
                                         <p className='text-secondaryGreen font-bold'>Esqueci minha senha</p>
 
@@ -59,9 +61,11 @@ export default function Login() {
                                     <p className=' mt-4 flex justify-between  
                                         mx-auto font-bold text-white text-xs'>
                                             Não tem conta? 
-                                        <span className='text-secondaryGreen ml-2'>
-                                            Registre-se
-                                        </span>
+                                        <Link to={'/Cadastro'}>
+                                            <span className='text-secondaryGreen ml-2'>
+                                                Registre-se
+                                            </span>
+                                        </Link>
                                     </p>
                                     
                                     {/* Login Alternativo */}
