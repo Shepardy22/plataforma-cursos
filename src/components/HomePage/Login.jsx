@@ -3,11 +3,6 @@ import Logo from'../../assets/img/Logo.png';
 import googleLogo from'../../assets/img/googleLogo.png';
 import gitLogo from'../../assets/img/gitLogo.png';
 
-import {FaEnvelope} from 'react-icons/fa';
-
-
-
-
 
 export default function Login() {
     return (
@@ -88,7 +83,9 @@ export default function Login() {
                 
                 </div>
                 <Link to={'/'}>
-                    <p className='text-secondaryGreen font-bold text-xl -mt-8 ml-4'>Voltar para Home</p>
+                    <p className='text-secondaryGreen font-bold 
+                        fixed top-16 left-2
+                        text-xl sm:-mt-8 sm:ml-4'>Voltar para Home</p>
                 </Link>
 
             </div>
