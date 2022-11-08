@@ -1,8 +1,8 @@
 import Logo from '../assets/img/Logo.png';
 import {FaBars, FaWindowClose} from 'react-icons/fa';
-import {Link} from 'react-router-dom';
+import {Link, useLocation, useParams} from 'react-router-dom';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function NavBar() {
 
@@ -12,18 +12,28 @@ export default function NavBar() {
         setShowMenu(!showMenu);
     }
 
-     
+      
+    const location = useLocation();
+    const [loc, setLoc] = useState(location.pathname);
+
+    
+
+        useEffect(() => {
+            setLoc(location.pathname);
+        }, [location.pathname]);
+       
+
     
 
 
     return (
         <>
             
-
-        <div className="h-24  w-full fixed top-0 z-50
+           
+        <div className= {`h-24  w-full fixed top-0 z-50          ${loc ==="/Login" && 'hidden'}
             backdrop-opacity-10 backdrop-invert bg-black/70 
             flex justify-between  items-center
-            ">
+            `}>
             <Link to={'/'}><img src={Logo}alt="Logo" className='' width={90}/></Link>
             {/* Menu Desktop */}
             <div className=' flex mx-auto w-full'>
@@ -35,11 +45,13 @@ export default function NavBar() {
 
                     <div className='flex '>
                         <li className=''>
-                            <button className='font-semibold bg-primaryBlue
-                                hover:bg-secondaryGreen hover:text-primaryBlue
-                             rounded-3xl w-24 h-8 text-secondaryGreen '>
-                                    Login
-                            </button>
+                            <Link to={'/Login'}>
+                                <button className='font-semibold bg-primaryBlue
+                                    hover:bg-secondaryGreen hover:text-primaryBlue
+                                 rounded-3xl w-24 h-8 text-secondaryGreen '>
+                                        Login
+                                </button>
+                            </Link>
                         </li>
                         <li className=''>
                             <button className='font-semibold bg-primaryBlue 

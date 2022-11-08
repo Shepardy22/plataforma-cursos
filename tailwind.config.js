@@ -16,6 +16,9 @@ module.exports = {
         "primaryCinza": "#51504E",
         "secondaryCinza": "#0F0E0A",
       },
+      fontFamily: {
+        "play": ["Play", "sans-serif"],
+      },
       
 
     },
