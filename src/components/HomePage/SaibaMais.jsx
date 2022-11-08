@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { useEffect, useRef, useState } from "react";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { useParams } from "react-router-dom";

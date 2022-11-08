@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Divisor from "../Divisor";
 import AulasInterativas from '../../assets/img/AulasInterativas.jpg';
 import ConteudoRev from '../../assets/img/ConteudoRev.jpg';

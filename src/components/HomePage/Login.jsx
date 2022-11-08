@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Logo from'../../assets/img/Logo.png';
 import googleLogo from'../../assets/img/googleLogo.png';
@@ -42,7 +44,7 @@ export default function Login() {
                                     {/* Inputs */}
                                     <div className=' flex flex-col h-3/6 '>
                                         <input type="text" className='bg-black/70 rounded-xl mb-4 h-3/6 text-sm text-white sm:h-16 pl-4' placeholder= {`Digite Seu e-mail`}/>
-                                        <input type="text" className='bg-black/70 rounded-xl  h-3/6 text-sm text-white sm:h-16 pl-4' placeholder=' Digite sua senha'/>
+                                        <input type="password" className='bg-black/70 rounded-xl  h-3/6 text-sm text-white sm:h-16 pl-4' placeholder=' Digite sua senha'/>
                                         <p className='text-secondaryGreen font-bold'>Esqueci minha senha</p>
 
                                     </div>
