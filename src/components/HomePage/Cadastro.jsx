@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
+import {FaArrowLeft} from 'react-icons/fa';
 
 
 export default function Login() {
@@ -34,6 +35,12 @@ export default function Login() {
                                 Junte-se  <br /> a Comunidade
                             </p>
                         </div>
+
+                        <Link to={'/Login'}>
+                            <div className=' text-secondaryGreen font-semibold flex items-center'>
+                                <span><FaArrowLeft/></span><span className='ml-4'>Voltar para Login</span>
+                            </div>
+                        </Link>
 
                     </div>
 
