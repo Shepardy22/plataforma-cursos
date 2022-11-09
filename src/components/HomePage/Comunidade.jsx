@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Divisor from '../Divisor';
 
 export default function Comunidade(){

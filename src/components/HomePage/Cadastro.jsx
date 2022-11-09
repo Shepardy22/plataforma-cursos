@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 
@@ -40,8 +41,8 @@ export default function Login() {
                                 <div className=' flex flex-col h-48 '>
                                     <input type="text" className='bg-black/70 rounded-xl mb-2 h-12 text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' email@example.com' />
                                     <input type="text" className='bg-black/70 rounded-xl mb-2 h-12  text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' Seu nome' />
-                                    <input type="text" className='bg-black/70 rounded-xl mb-2 h-12 text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' Sua senha' />
-                                    <input type="text" className='bg-black/70 rounded-xl mb-2 h-12 text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' Repita sua senha' />
+                                    <input type="password" className='bg-black/70 rounded-xl mb-2 h-12 text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' Sua senha' />
+                                    <input type="password" className='bg-black/70 rounded-xl mb-2 h-12 text-xs sm:text-sm text-white sm:h-16 pl-4' placeholder=' Repita sua senha' />
                                 </div>
 
                                 <p className='text-white text-xs sm:text-base px-2'>Ao se registrar, você aceita nossos 
