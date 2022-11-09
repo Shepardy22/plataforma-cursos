@@ -12,10 +12,6 @@ import Cadastro from "./components/HomePage/Cadastro";
 
 function App() {
 
-  
-  
-
-
 
   return (
     <div className="bg-background bg-no-repeat bg-cover">
@@ -31,6 +27,7 @@ function App() {
             <Route path="/Saibamais/:id" element={<SaibaMais/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Cadastro" element={<Cadastro/>}/>
+            
 
 
           </Routes>

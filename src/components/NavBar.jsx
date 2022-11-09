@@ -13,25 +13,16 @@ export default function NavBar() {
     function toggleMenu() {
         setShowMenu(!showMenu);
     }
-
-      
+   
     const location = useLocation();
     const [loc, setLoc] = useState(location.pathname);
-
-    
 
         useEffect(() => {
             setLoc(location.pathname);
         }, [location.pathname]);
-       
-
-    
-
 
     return (
         <>
-            
-           
         <div className= {`h-24  w-full fixed top-0 z-50          
             ${loc ==="/Login"  && 'hidden'}
             ${loc ==="/Cadastro"  && 'hidden'}
