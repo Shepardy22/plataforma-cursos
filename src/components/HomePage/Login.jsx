@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 import googleLogo from '../../assets/img/googleLogo.png';
 import gitLogo from '../../assets/img/gitLogo.png';
+import NavBar from '../NavBar';
 
 
 export default function Login() {
     return (
         <div className="bg-background bg-no-repeat flex   min-h-screen  ">
 
-            
+            <NavBar />
             
             <div className=' p-4 w-full my-auto bg-black/70 flex flex-col
                             sm:flex-row sm:items-center sm:justify-around '>

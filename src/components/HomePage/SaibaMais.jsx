@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import Card from "../Card";
+import NavBar from '../NavBar';
 
 
 
@@ -45,6 +46,7 @@ export default function SaibaMais() {
 
     return (
         <div className=" h-screen flex items-center justify-center ">
+            <NavBar />
 
             <div className="flex flex-col items-center w-full mt-24 ">
 
