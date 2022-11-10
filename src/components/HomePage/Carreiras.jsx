@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Card from "../Card";
 
 import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa';
+import NavBar from '../NavBar';
 
 export default function Carreiras() {
 //window.scrollTo(0, 0);
@@ -39,6 +40,7 @@ export default function Carreiras() {
 
         <div className="w-full  flex flex-col 
                 h-screen  ">
+                    <NavBar />
             
             <div className="flex justify-center  flex-col my-auto">
 

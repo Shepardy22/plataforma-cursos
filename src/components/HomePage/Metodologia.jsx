@@ -4,11 +4,13 @@ import Divisor from "../Divisor";
 import AulasInterativas from '../../assets/img/AulasInterativas.jpg';
 import ConteudoRev from '../../assets/img/ConteudoRev.jpg';
 import { Typewriter } from 'react-simple-typewriter'
+import NavBar from '../NavBar';
 
 
 export default function Metodologia() {
     return (
         <>
+        <NavBar />
             <div className=" flex flex-col h-full py-24 bg-bg-Cod">
 
                 <div className="w-full  h-96 flex flex-col sm:flex-row">

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter'
+import NavBar from '../NavBar';
 
 export default function Home (){
 
@@ -11,6 +12,7 @@ export default function Home (){
     
     return(
         <>
+        <NavBar />
          <div className=" w-full  flex flex-col
             h-screen ">
             {/* Cards Middle */}

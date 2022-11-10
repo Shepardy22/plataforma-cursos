@@ -3,12 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 import {FaArrowLeft} from 'react-icons/fa';
+import NavBar from '../NavBar';
 
 
 export default function Login() {
     return (
         <div className="bg-background bg-no-repeat flex   min-h-screen  ">
-
+                    <NavBar />
             
             
             <div className=' p-4 w-full my-auto bg-black/70 flex flex-col
