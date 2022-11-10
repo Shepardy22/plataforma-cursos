@@ -36,7 +36,7 @@ export default function NavBar() {
                     <li className='hover:text-primaryBlue '><Link to="/">Home</Link></li>
                     <li className='hover:text-primaryBlue '><Link to="/Carreiras">Cursos</Link></li>
                     <li className='hover:text-primaryBlue '><Link to="/Metodologia">Ensino</Link></li>
-                    <li className='hover:text-primaryBlue '><Link to="/Comunidade">Comunidade</Link></li>
+                    <li className='hover:text-primaryBlue '><Link to="/Dashboard">Comunidade</Link></li>
 
                     <div className='flex '>
                         <li className=''>
@@ -99,7 +99,7 @@ export default function NavBar() {
                     <li className='mb-4  hover:text-primaryBlue'><Link to="/" onClick={toggleMenu}>Home</Link></li>
                     <li className='mb-4 hover:text-primaryBlue'> <Link to="/Carreiras" onClick={toggleMenu}>Cursos</Link></li>
                     <li className='mb-4 hover:text-primaryBlue'> <Link to="/Metodologia" onClick={toggleMenu}>Ensino</Link></li>
-                    <li className='mb-4 hover:text-primaryBlue'> <Link to="/Comunidade"onClick={toggleMenu}>Comunidade</Link></li>
+                    <li className='mb-4 hover:text-primaryBlue'> <Link to="/Dashboard"onClick={toggleMenu}>Comunidade</Link></li>
                     <li className='mb-4 hover:text-primaryBlue text-xl mt-6'>
                         <Link to={'/Login'} >
                             <button className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
