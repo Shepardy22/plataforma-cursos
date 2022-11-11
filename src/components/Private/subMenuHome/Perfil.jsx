@@ -2,6 +2,7 @@ import Forja from "../../Forja";
 import Inventario from "../../Inventario";
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Perfil() {
 
@@ -16,7 +17,7 @@ export default function Perfil() {
 
     return (
         <div className="bg-black  p-4 rounded-xl">
-                {/* Frase do dia */}
+            {/* Frase do dia */}
             <div className="flex-col  justify-center    p-4 ">
                 <h1 className="mt-4 font-bold text-xl sm:text-2xl text-center ">Frase do Dia</h1>
                 <p className="  flex items-center justify-center text-center
@@ -24,14 +25,14 @@ export default function Perfil() {
                     Corra o risco. Se der certo, felicidade. Se não, sabedoria.
                 </p>
             </div>
-            
-                {/* SubMenu */}
+
+            {/* SubMenu */}
             <div className="  flex justify-around mb-2 ">
                 <button onClick={handleSetInventario} className="bg-secondaryGreen h-14 rounded-lg border border-primaryBlue text-black w-36 font-bold">
                     Inventário
                 </button >
                 <button onClick={handleSetForja} className="bg-secondaryGreen h-14 rounded-lg border border-primaryBlue text-black w-36 font-bold">
-                Forja de Insígnias
+                    Forja de Insígnias
                 </button>
             </div>
 
@@ -40,7 +41,9 @@ export default function Perfil() {
                 {subMenu === "Inventario" && <Inventario />}
             </div>
 
-            
+            <h1 className="text-white flex justify-end mr-6 italic text-sm font-bold mb-2">
+                <Link>Tutorias sobre Insígnias e Emblemas</Link>
+            </h1>
         </div>
     )
 }
