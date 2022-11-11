@@ -41,7 +41,7 @@ export default function Habilidades() {
                 title={"React"}
             />
             <h1 className="text-white flex justify-end mr-6 italic text-sm font-bold mb-2">
-                <Link>Tutorias sobre Insígnias e Emblemas</Link>
+                <Link>Saber mais sobre Níveis e Habilidades</Link>
             </h1>
         </div>
     )
