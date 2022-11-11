@@ -27,7 +27,7 @@ export default function NavBarDashboard() {
 
     return (
         <>
-            <div className={`h-24  w-full fixed top-0 z-50          
+            <div className={`h-24  w-full  top-0 z-50    absolute      
               
              
             backdrop-opacity-10 backdrop-invert bg-black/70 
