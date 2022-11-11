@@ -27,16 +27,16 @@ export default function NavBarDashboard() {
 
     return (
         <>
-            <div className={`h-24  w-full fixed top-0 z-50          
+            <div className={`h-16  w-full  top-0 z-50    absolute      
               
              
             backdrop-opacity-10 backdrop-invert bg-black/70 
             flex justify-between  items-center
             `}>
-                <Link to={'/'}><img src={Logo} alt="Logo" className='' width={90} /></Link>
+                <Link to={'/'}><img src={Logo} alt="Logo" className='ml-2' width={50} /></Link>
                 {/* Menu Desktop */}
                 <div className=' flex mx-auto w-full '>
-                    <ul className='text-white hidden sm:flex w-full justify-around text-xl items-center'>
+                    <ul className='text-white hidden sm:flex w-full justify-around text-lg items-center'>
                         <li className='hover:text-primaryBlue '><Link to="/">Home</Link></li>
                         <li className='hover:text-primaryBlue '><Link to="/Carreiras">Bootcamps</Link></li>
                         <li className='hover:text-primaryBlue '><Link to="/Metodologia">Salas</Link></li>
@@ -45,22 +45,22 @@ export default function NavBarDashboard() {
                         <div className='flex items-center '>
                             <span className='mr-4 mt-8'><FaBell /></span>
                             <button onClick={toggleMenuDesk}>
-                                <div className='rounded-full h-16 w-16  border border-primaryBlue'>
+                                <div className='rounded-full h-12 w-12  border border-primaryBlue'>
                                     <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
                                 </div>
                             </button>
 
                             {/* menu Desktop */}
                             <div className= {`${showMenuDesk ? '' : 'hidden'} h-28 rounded-b-2xl w-44 -ml-6 bg-black/70 
-                                mt-24 flex flex-col items-center  top-0 absolute`}>
+                                mt-16 flex flex-col items-center  top-0 absolute`}>
                                 
                                 <Link to={'/Login'}>
                                     <h1 className='text-white mt-4 hover:text-primaryBlue'>Minha Conta</h1>
                                 </Link>
 
                                 <Link to={'/Login'} >
-                                    <button className='font-semibold h-8 mt-6  bg-primaryBlue
-                                    hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
+                                    <button className='font-semibold h-6 mt-6  bg-primaryBlue
+                                    hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-28 text-secondaryGreen '>
                                         Sair
                                     </button>
                                 </Link>

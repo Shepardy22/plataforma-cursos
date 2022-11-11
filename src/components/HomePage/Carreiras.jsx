@@ -53,7 +53,7 @@ export default function Carreiras() {
                                 flex items-center
                                 overflow-x-auto scroll-smooth
                                 ">
-                        {/* Cards */}
+                            {/* Cards */}
                         <div className="flex">
                             {/* passar via props os Dados */}
                             {cursos.map((curso) => (
