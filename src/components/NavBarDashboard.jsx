@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, {  useContext, useState } from 'react';
 
 import Logo from '../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../contexts/authVerify';
 
 
 export default function NavBarDashboard() {
+
+    const {signOut} = useContext(AuthContext);
+     
+    
+    
+    
 
     const [showMenu, setShowMenu] = useState(false);
     function toggleMenu() {
@@ -59,7 +66,7 @@ export default function NavBarDashboard() {
                                 </Link>
 
                                 <Link to={'/Login'} >
-                                    <button className='font-semibold h-6 mt-6  bg-primaryBlue
+                                    <button onClick={signOut} className='font-semibold h-6 mt-6  bg-primaryBlue
                                     hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-28 text-secondaryGreen '>
                                         Sair
                                     </button>
