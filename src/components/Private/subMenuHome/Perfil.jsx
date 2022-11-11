@@ -28,11 +28,13 @@ export default function Perfil() {
 
             {/* SubMenu */}
             <div className="  flex justify-around mb-2 text-sm">
-                <button onClick={handleSetInventario} className="bg-secondaryGreen h-12 rounded-lg border
+                <button onClick={handleSetInventario} className="bg-secondaryGreen h-12
+                     rounded-lg border hover:bg-primaryBlue hover:text-secondaryGreen
                      border-primaryBlue text-black w-28 font-bold">
                     Inventário
                 </button >
-                <button onClick={handleSetForja} className="bg-secondaryGreen h-12 rounded-lg border
+                <button onClick={handleSetForja} className="bg-secondaryGreen h-12
+                     rounded-lg border hover:bg-primaryBlue hover:text-secondaryGreen
                      border-primaryBlue text-black w-28 font-bold">
                     Forja de Insígnias
                 </button>

@@ -9,8 +9,8 @@ export default function Habilidades() {
                 height={"2"}
                 width={"w-full"}
                 exp={423}
-                expMax={589}
-                nivel={9}
+                expMax={2548}
+                nivel={8}
                 title={"HTML 5"}
             />
 
@@ -18,26 +18,26 @@ export default function Habilidades() {
                 height={"2"}
                 width={"w-full"}
                 exp={745}
-                expMax={1249}
-                nivel={9}
+                expMax={1722}
+                nivel={5}
                 title={"CSS 3"}
             />
 
             <ProgressBar color={"primaryBlue"}
                 height={"2"}
                 width={"w-full"}
-                exp={856}
-                expMax={1200}
-                nivel={9}
+                exp={1843}
+                expMax={2145}
+                nivel={7}
                 title={"JavaScript"}
             />
 
             <ProgressBar color={"primaryBlue"}
                 height={"2"}
                 width={"w-full"}
-                exp={245}
-                expMax={589}
-                nivel={9}
+                exp={2378}
+                expMax={3426}
+                nivel={12}
                 title={"React"}
             />
             <h1 className="text-white flex justify-end mr-6 italic text-sm font-bold mb-2">
