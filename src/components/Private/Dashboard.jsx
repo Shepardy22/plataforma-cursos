@@ -105,7 +105,7 @@ export default function Dashboard() {
                     {/* Main */}
                     <div className="  p-2 sm:w-9/12">
 
-                        {/* SubNavBar */}
+                        {/* SubNavBar e Render*/}
                         <div className="bg-black/60 h-full rounded-xl">
                             <nav className="text-white h-16 ">
                                 <ul className="flex w-full h-full items-center justify-around sm:text-xl">
