@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 import {FaArrowLeft} from 'react-icons/fa';
 import NavBar from '../NavBar';
+import { auth } from '../../services/firebaseConfig';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 
 export default function Login() {
+
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    function handleCadastro(e) {
+        e.preventDefault();
+        createUserWithEmailAndPassword(email, password);
+    }
+
+
+
+    if (loading) {
+        console.log(user)
+        return <Navigate to="/Dashboard" />
+    }
+
+
+
+
     return (
         <div className="bg-background bg-no-repeat flex   min-h-screen  ">
                     <NavBar />
@@ -53,8 +81,10 @@ export default function Login() {
                     {/* Inputs */}
                     <div className=' flex flex-col '>
                         <input type="text" className='bg-black/70 rounded-xl mb-2 h-14 text-sm text-white sm:h-16 pl-4' placeholder={`Digite Seu nome`} />
-                        <input type="password" className='bg-black/70 rounded-xl mb-2  h-14 text-sm text-white sm:h-16 pl-4' placeholder=' Digite Seu e-mail' />
-                        <input type="text" className='bg-black/70 rounded-xl mb-2 h-14 text-sm text-white sm:h-16 pl-4' placeholder={`Digite sua senha`} />
+                        {/* e-mail */}
+                        <input onChange={e => setEmail(e.target.value)} type="text" className='bg-black/70 rounded-xl mb-2  h-14 text-sm text-white sm:h-16 pl-4' placeholder=' Digite Seu e-mail' />
+                        {/* senha */}
+                        <input onChange={e => setPassword(e.target.value)} type="password" className='bg-black/70 rounded-xl mb-2 h-14 text-sm text-white sm:h-16 pl-4' placeholder={`Digite sua senha`} />
                         <input type="password" className='bg-black/70 rounded-xl  h-14 text-sm text-white sm:h-16 pl-4' placeholder=' Repita sua senha' />  
                     </div>
                     {/* Botton Form */}
@@ -66,7 +96,9 @@ export default function Login() {
                         {/* Botao Cadastrar */}
                         <div className='bg-secondaryGreen/80 w-5/6 rounded-lg flex justify-center
                                             text-2xl font-bold mx-auto py-2 '>
-                            <Link><button>Cadastrar</button></Link>
+                            <Link>
+                                <button onClick={handleCadastro}>Cadastrar</button>
+                            </Link>
                         </div>
 
                         <Link to={'/'}>

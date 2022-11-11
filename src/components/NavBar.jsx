@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Logo from '../assets/img/Logo.png';
 import {FaBars, FaWindowClose} from 'react-icons/fa';
@@ -7,6 +7,9 @@ import {Link, useLocation} from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 export default function NavBar() {
+
+
+    
 
     const [showMenu, setShowMenu] = useState(false);
 

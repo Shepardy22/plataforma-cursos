@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, {  useContext, useState } from 'react';
 
 import Logo from '../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../contexts/authVerify';
 
 
 export default function NavBarDashboard() {
+
+    const {signOut} = useContext(AuthContext);
+     
+    
+    
+    
 
     const [showMenu, setShowMenu] = useState(false);
     function toggleMenu() {
@@ -37,10 +44,10 @@ export default function NavBarDashboard() {
                 {/* Menu Desktop */}
                 <div className=' flex mx-auto w-full '>
                     <ul className='text-white hidden sm:flex w-full justify-around text-lg items-center'>
-                        <li className='hover:text-primaryBlue '><Link to="/">Home</Link></li>
-                        <li className='hover:text-primaryBlue '><Link to="/Carreiras">Bootcamps</Link></li>
-                        <li className='hover:text-primaryBlue '><Link to="/Metodologia">Salas</Link></li>
-                        <li className='text-secondaryGreen hover:text-primaryBlue '><Link to="/Comunidade">Swap Pro</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Home</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Bootcamps</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Salas</Link></li>
+                        <li className='text-secondaryGreen hover:text-primaryBlue '><Link to="/Dashboard">Swap Pro</Link></li>
 
                         <div className='flex items-center '>
                             <span className='mr-4 mt-8'><FaBell /></span>
@@ -59,7 +66,7 @@ export default function NavBarDashboard() {
                                 </Link>
 
                                 <Link to={'/Login'} >
-                                    <button className='font-semibold h-6 mt-6  bg-primaryBlue
+                                    <button onClick={signOut} className='font-semibold h-6 mt-6  bg-primaryBlue
                                     hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-28 text-secondaryGreen '>
                                         Sair
                                     </button>
@@ -116,7 +123,7 @@ export default function NavBarDashboard() {
                         <li className='mb-4 text-secondaryGreen hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Swap Pro</Link></li>
                         <li className='mb-4  hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Minha Conta</Link></li>
 
-                        <li className='mt-16 hover:text-primaryBlue text-xl  '>
+                        <li className='mt-10 hover:text-primaryBlue text-xl  '>
                             <Link to={'/Login'} >
                                 <button className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                     Sair

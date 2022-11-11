@@ -4,13 +4,30 @@ import Projetos from "../Private/subMenuHome/Projetos";
 import Perfil from "../Private/subMenuHome/Perfil";
 import Habilidades from "../Private/subMenuHome/Habilidades";
 
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import ProgressBar from "../ProgressBar";
 import { FaCss3Alt, FaGrunt, FaHtml5, FaInternetExplorer, FaJava, FaJsSquare, FaMedal, FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/authVerify";
 
 
 export default function Dashboard() {
+
+    
+    const {user} = useContext(AuthContext);
+    const [photo, setPhoto] = useState('');
+    
+    useEffect(() => {
+        
+        console.log(user.displayName);
+        setPhoto(user.photoURL);
+        console.log(user.email);
+
+    }, []);
+    
+    
+    
+
 
     const [xp, setXp] = useState(463);
     const [xpMaximo, setXpMaximo] = useState(1245);
@@ -48,10 +65,10 @@ export default function Dashboard() {
                         <div className="bg-black/80  rounded-xl flex flex-col items-center h-full ">
 
                             <div className="h-24 w-24   mt-16">
-                                <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
+                                {photo && <img src={photo} alt="Foto de perfil" className='rounded-full ' />}
                             </div>
 
-                            <h1 className="text-white pt-4 text-xl">Yuri Nunes</h1>
+                            <h1 className="text-white pt-4 text-xl">{user.displayName}</h1>
 
                             {/* Nivel Perfil */}
                             <div className=" flex flex-col items-center w-full p-2 ">
