@@ -27,11 +27,11 @@ export default function Perfil() {
             
                 {/* SubMenu */}
             <div className="  flex justify-around mb-2 ">
-                <button onClick={handleSetForja} className="bg-secondaryGreen h-14 rounded-lg border border-primaryBlue text-black w-36 font-bold">
-                    Forja de Insígnias
-                </button >
                 <button onClick={handleSetInventario} className="bg-secondaryGreen h-14 rounded-lg border border-primaryBlue text-black w-36 font-bold">
                     Inventário
+                </button >
+                <button onClick={handleSetForja} className="bg-secondaryGreen h-14 rounded-lg border border-primaryBlue text-black w-36 font-bold">
+                Forja de Insígnias
                 </button>
             </div>
 

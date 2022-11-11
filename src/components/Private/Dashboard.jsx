@@ -39,7 +39,7 @@ export default function Dashboard() {
             <NavBarDashboard />
 
             <div className=" ">
-                <div className="pt-24 flex flex-col 
+                <div className="pt-16 flex flex-col 
                      sm:flex-row">
 
                     {/* Aba Lateral */}
@@ -51,14 +51,14 @@ export default function Dashboard() {
                                 <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
                             </div>
 
-                            <h1 className="text-white pt-4 text-2xl">Yuri Nunes</h1>
+                            <h1 className="text-white pt-4 text-xl">Yuri Nunes</h1>
 
                             {/* Nivel Perfil */}
                             <div className=" flex flex-col items-center w-full p-2">
 
                                 <div className="flex flex-col items-center w-full rounded-xl bg-black">
 
-                                    <h1 className="text-white pt-4 text-2xl">Nível do perfil</h1>
+                                    <h1 className="text-white pt-4 text-xl">Nível do perfil</h1>
 
                                     <div className="text-white flex  w-full items-center justify-around ">
                                         <span className="text-primaryBlue italic font-semibold flex text-sm">{xp}/{xpMaximo}</span>
@@ -72,10 +72,10 @@ export default function Dashboard() {
 
                             {/* ensignias */}
                             <div className=" w-full p-2">
-                                <div className="rounded-2xl bg-black border border-secondaryGreen p-2">
+                                <div className="rounded-xl bg-black border border-secondaryGreen p-2">
                                     <div className="h-96 text-center">
                                         
-                                        <h1 className="text-primaryBlue font-semibold  text-2xl">Insígnias</h1>
+                                        <h1 className="text-primaryBlue font-semibold  text-xl">Insígnias</h1>
                                         {/* Itens */}
                                         <div className="  mt-2 flex flex-wrap  p-2 gap-2">
 
@@ -101,18 +101,18 @@ export default function Dashboard() {
                     <div className="  p-2 sm:w-9/12">
                             {/* SubNavBar */}
                         <div className="bg-black/60 h-full rounded-xl">
-                            <nav className="text-white h-24 ">
-                                <ul className="flex w-full h-full items-center justify-around sm:text-2xl">
+                            <nav className="text-white h-16 ">
+                                <ul className="flex w-full h-full items-center justify-around sm:text-xl">
                                     <button onClick={handleSetPerfil} className={`hover:bg-black/20 ${subMenu === "Perfil" && "bg-black hover:bg-black"} 
-                                                h-24 flex items-center justify-center w-full rounded-t-2xl`}>
+                                                h-16 flex items-center justify-center w-full rounded-t-xl`}>
                                         <li>Perfil</li>
                                     </button>
                                     <button onClick={handleSetHab} className={`hover:bg-black/20 ${subMenu === "Habilidades" && "bg-black hover:bg-black"}
-                                                 h-24 flex items-center justify-center w-full rounded-t-2xl`}>
+                                                 h-16 flex items-center justify-center w-full rounded-t-xl`}>
                                         <li>Habilidades</li>
                                     </button>
                                     <button onClick={handleSetProj} className={`hover:bg-black/20 ${subMenu === "Projetos" && "bg-black hover:bg-black"}
-                                                 h-24 flex items-center justify-center w-full rounded-t-2xl`}>
+                                                 h-16 flex items-center justify-center w-full rounded-t-xl`}>
                                         <li>Projetos</li>
                                     </button>
                                 </ul>
