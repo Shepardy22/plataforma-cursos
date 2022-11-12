@@ -57,7 +57,7 @@ export const AuthProvider = ({ children }) => {
             })
             .catch((error) => {
                 const errorCode = error.code;
-                const errorMessage = error.message;
+                //const errorMessage = error.message;
                 if (errorCode === 'auth/wrong-password') {
                     setErrorDetected("Senha incorreta!");
                 }else if(errorCode === 'auth/user-not-found'){
@@ -66,14 +66,11 @@ export const AuthProvider = ({ children }) => {
                     setErrorDetected("Email inválido!");
                 }else{
                     setErrorDetected("Erro ao fazer login!");
-                }
-                
-                
+                } 
             });
     }
 
     const [errorDetected, setErrorDetected] = useState(false);
-    
 
     function signOut() {
         localStorage.clear();

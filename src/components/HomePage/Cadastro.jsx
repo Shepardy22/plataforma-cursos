@@ -25,15 +25,10 @@ export default function Login() {
         createUserWithEmailAndPassword(email, password);
     }
 
-
-
     if (loading) {
         console.log(user)
         return <Navigate to="/Dashboard" />
     }
-
-
-
 
     return (
         <div className="bg-background bg-no-repeat flex   min-h-screen  ">
