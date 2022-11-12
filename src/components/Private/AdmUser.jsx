@@ -4,7 +4,7 @@ import { useState } from "react";
 import { db } from "../../services/firebaseConfig";
 import { collection, addDoc, deleteDoc, doc } from "firebase/firestore";
 
-
+// Funcionalidades ADM
 export default function AdmUser() {
 
  const userCollectionRef = collection(db, "projetos");
