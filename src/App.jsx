@@ -10,8 +10,9 @@ import Cadastro from "./components/HomePage/Cadastro";
 
 import Dashboard from "./components/Private/Dashboard";
 import { AuthProvider } from "./contexts/authVerify";
-import { Fragment } from "react";
 import { PrivateRoutes } from "./components/PrivateRoutes";
+import { ContextStore } from "./contexts/contextProject";
+import AdmUser from "./components/Private/AdmUser";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Router>
 
       <AuthProvider>
+        <ContextStore>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
             <Route path="/carreiras" element={<Carreiras/>}/>
@@ -31,20 +33,18 @@ function App() {
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Cadastro" element={<Cadastro/>}/>
             {/* Rotas Restritas com Autenticação */}
-            
-            
-            
 
               <Route path="/Dashboard" element={<PrivateRoutes/>}>
                 <Route path="/Dashboard" element={<Dashboard/>}/>
               </Route>
-            
-            
-            
 
+              <Route path="/AdmUser" element={<PrivateRoutes/>}>
+                <Route path="/AdmUser" element={<AdmUser/>}/>
+              </Route>
 
           </Routes>
-          </AuthProvider>
+        </ContextStore>
+      </AuthProvider>
 
       </Router>
       

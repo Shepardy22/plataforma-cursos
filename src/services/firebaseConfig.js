@@ -1,10 +1,11 @@
 import { initializeApp } from "firebase/app";
 //import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyACY_EyaeIwhX3lJM9EJbXGmCnfXFpp1MY",
   authDomain: "plataformacursos-8ef7e.firebaseapp.com",
   projectId: "plataformacursos-8ef7e",
@@ -18,4 +19,9 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 
+export const db = getFirestore(app);
+
 export const auth = getAuth(app);
+
+
+

@@ -1,12 +1,12 @@
 import React, {  useContext, useState } from 'react';
 
-import Logo from '../assets/img/Logo.png';
+import Logo from '../../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../contexts/authVerify';
+import { AuthContext } from '../../contexts/authVerify';
 
 
-export default function NavBarDashboard() {
+export default function NavBarADM() {
 
     const {signOut} = useContext(AuthContext);
 
@@ -18,13 +18,6 @@ export default function NavBarDashboard() {
     function toggleMenuDesk() {
         setShowMenuDesk(!showMenuDesk);
     }
-
-    // const location = useLocation();
-    // const [loc, setLoc] = useState(location.pathname);
-
-    //     useEffect(() => {
-    //         setLoc(location.pathname);
-    //     }, [location.pathname]);
 
     return (
         <>

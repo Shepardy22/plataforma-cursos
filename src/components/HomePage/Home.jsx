@@ -14,8 +14,7 @@ export default function Home (){
 
         return <Navigate to="/Dashboard" />
 
-    }
-    console.log(signed)   
+    } 
 
     return(
                 <>

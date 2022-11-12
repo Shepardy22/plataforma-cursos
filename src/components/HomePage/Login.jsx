@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-
 import { Link, Navigate } from 'react-router-dom';
 import Logo from '../../assets/img/Logo.png';
 import googleLogo from '../../assets/img/googleLogo.png';

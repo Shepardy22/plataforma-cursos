@@ -12,13 +12,10 @@ import { AuthContext } from "../../contexts/authVerify";
 
 
 export default function Dashboard() {
-
-    
+ 
     const {user} = useContext(AuthContext);
     const [photo, setPhoto] = useState(null);
 
-   
-    
     useEffect(() => {
         const photoUser =localStorage.getItem("@AuthFirebase:Photo");
         if(photoUser){
@@ -28,15 +25,12 @@ export default function Dashboard() {
         
     }, []);
     
-    
   //função assíncrona para pegar a foto do usuário
     async function getPhoto(){
         const photoUse =localStorage.getItem("@AuthFirebase:Photo");
         console.log(photoUse);
     }
     
-
-
     const [xp, setXp] = useState(463);
     const [xpMaximo, setXpMaximo] = useState(1245);
     const [nivel, setNivel] = useState(9);
