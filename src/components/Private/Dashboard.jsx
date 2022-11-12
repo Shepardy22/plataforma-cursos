@@ -15,17 +15,25 @@ export default function Dashboard() {
 
     
     const {user} = useContext(AuthContext);
-    const [photo, setPhoto] = useState('');
+    const [photo, setPhoto] = useState(null);
+
+   
     
     useEffect(() => {
+        const photoUser =localStorage.getItem("@AuthFirebase:Photo");
+        if(photoUser){
+            setPhoto(photoUser);
+            
+        }
         
-        console.log(user.displayName);
-        setPhoto(user.photoURL);
-        console.log(user.email);
-
     }, []);
     
     
+  //função assíncrona para pegar a foto do usuário
+    async function getPhoto(){
+        const photoUse =localStorage.getItem("@AuthFirebase:Photo");
+        console.log(photoUse);
+    }
     
 
 

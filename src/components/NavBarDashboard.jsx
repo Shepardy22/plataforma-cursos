@@ -9,10 +9,6 @@ import { AuthContext } from '../contexts/authVerify';
 export default function NavBarDashboard() {
 
     const {signOut} = useContext(AuthContext);
-     
-    
-    
-    
 
     const [showMenu, setShowMenu] = useState(false);
     function toggleMenu() {
@@ -22,8 +18,6 @@ export default function NavBarDashboard() {
     function toggleMenuDesk() {
         setShowMenuDesk(!showMenuDesk);
     }
-
-
 
     // const location = useLocation();
     // const [loc, setLoc] = useState(location.pathname);
