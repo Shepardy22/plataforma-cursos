@@ -8,6 +8,9 @@ import { AuthContext } from '../../contexts/authVerify';
 
 export default function NavBarADM() {
 
+    const photoUser =localStorage.getItem("@AuthFirebase:Photo");
+
+
     const {signOut} = useContext(AuthContext);
 
     const [showMenu, setShowMenu] = useState(false);
@@ -43,7 +46,7 @@ export default function NavBarADM() {
                             <span className='mr-4 mt-8'><FaBell /></span>
                             <button onClick={toggleMenuDesk}>
                                 <div className='rounded-full h-12 w-12  border border-primaryBlue'>
-                                    <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
+                                    <img src={photoUser} alt="Foto de perfil" className='rounded-full ' />
                                 </div>
                             </button>
 

@@ -7,8 +7,15 @@ import Card from "../Card";
 import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa';
 import NavBar from '../NavBar';
 
+import { db } from "../../services/firebaseConfig";
+import { collection, getDocs } from 'firebase/firestore';
+
 export default function Carreiras() {
-//window.scrollTo(0, 0);
+
+    const userCollectionRef = collection(db, "cursos");
+
+    const [cursosList, setCursosList] = useState([]);
+
 
     const refCaroucel = useRef(null);
     
@@ -22,19 +29,16 @@ export default function Carreiras() {
         refCaroucel.current.scrollLeft -= refCaroucel.current.offsetWidth;
     };
 
-    const [cursos, setcursos] = useState([]);
-
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/Shepardy22/plataforma-cursos/Cursos', {
-            method: 'GET',
-            headers: {'Content-Type': 'application/json'}})
-            .then(response => response.json())
-            .then(data => setcursos(data))
+        
 
-            .catch(error => console.log(error))
-
-            
+            const getCursos = async () => {
+                const data = await getDocs(userCollectionRef);
+                setCursosList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            }
+            getCursos();
     }, []);
+
 
     return (
 
@@ -56,11 +60,12 @@ export default function Carreiras() {
                             {/* Cards */}
                         <div className="flex">
                             {/* passar via props os Dados */}
-                            {cursos.map((curso) => (
+                            {cursosList.map((curso) => (
                                 <Card key={curso.id} curso={curso} nomeButton='Saiba Mais'/>
                             ))}
                             
                         </div>
+     
 
                     </div>
                     

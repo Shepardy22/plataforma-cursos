@@ -5,31 +5,22 @@ import Perfil from "../Private/subMenuHome/Perfil";
 import Habilidades from "../Private/subMenuHome/Habilidades";
 
 import { useContext, useState, useEffect } from "react";
-import ProgressBar from "../ProgressBar";
 import { FaCss3Alt, FaGrunt, FaHtml5, FaInternetExplorer, FaJava, FaJsSquare, FaMedal, FaReact } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/authVerify";
 
+import { db } from "../../services/firebaseConfig";
+import { collection } from "firebase/firestore";
 
 export default function Dashboard() {
+
+    const userCollectionRef = collection(db, "users");
  
     const {user} = useContext(AuthContext);
-    const [photo, setPhoto] = useState(null);
-
-    useEffect(() => {
-        const photoUser =localStorage.getItem("@AuthFirebase:Photo");
-        if(photoUser){
-            setPhoto(photoUser);
-            
-        }
-        
-    }, []);
     
-  //função assíncrona para pegar a foto do usuário
-    async function getPhoto(){
-        const photoUse =localStorage.getItem("@AuthFirebase:Photo");
-        console.log(photoUse);
-    }
+
+    const photoUser =localStorage.getItem("@AuthFirebase:Photo");
+
+    
     
     const [xp, setXp] = useState(463);
     const [xpMaximo, setXpMaximo] = useState(1245);
@@ -67,7 +58,7 @@ export default function Dashboard() {
                         <div className="bg-black/80  rounded-xl flex flex-col items-center h-full ">
 
                             <div className="h-24 w-24   mt-16">
-                                {photo && <img src={photo} alt="Foto de perfil" className='rounded-full ' />}
+                                {photoUser && <img src={photoUser} alt="Foto de perfil" className='rounded-full ' />}
                             </div>
 
                             <h1 className="text-white pt-4 text-xl">{user.displayName}</h1>

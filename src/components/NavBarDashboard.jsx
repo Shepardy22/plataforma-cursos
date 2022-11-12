@@ -1,4 +1,4 @@
-import React, {  useContext, useState } from 'react';
+import React, {  useContext, useEffect, useState } from 'react';
 
 import Logo from '../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
@@ -8,7 +8,10 @@ import { AuthContext } from '../contexts/authVerify';
 
 export default function NavBarDashboard() {
 
-    const {signOut} = useContext(AuthContext);
+    
+    const photoUser =localStorage.getItem("@AuthFirebase:Photo");
+
+    const {signOut, } = useContext(AuthContext);
 
     const [showMenu, setShowMenu] = useState(false);
     function toggleMenu() {
@@ -18,13 +21,6 @@ export default function NavBarDashboard() {
     function toggleMenuDesk() {
         setShowMenuDesk(!showMenuDesk);
     }
-
-    // const location = useLocation();
-    // const [loc, setLoc] = useState(location.pathname);
-
-    //     useEffect(() => {
-    //         setLoc(location.pathname);
-    //     }, [location.pathname]);
 
     return (
         <>
@@ -50,7 +46,7 @@ export default function NavBarDashboard() {
                             <span className='mr-4 mt-8'><FaBell /></span>
                             <button onClick={toggleMenuDesk}>
                                 <div className='rounded-full h-12 w-12  border border-primaryBlue'>
-                                    <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
+                                    <img src={photoUser} alt="perfil" className='rounded-full ' />
                                 </div>
                             </button>
 

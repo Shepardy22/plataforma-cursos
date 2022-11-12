@@ -8,9 +8,6 @@ import { useEffect, useState } from 'react';
 
 export default function NavBar() {
 
-
-    
-
     const [showMenu, setShowMenu] = useState(false);
 
     function toggleMenu() {
