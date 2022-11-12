@@ -6,7 +6,6 @@ import googleLogo from '../../assets/img/googleLogo.png';
 import gitLogo from '../../assets/img/gitLogo.png';
 import NavBar from '../NavBar';
 
-import { app, auth } from '../../services/firebaseConfig';
 import { AuthContext } from '../../contexts/authVerify';
 
 
@@ -14,8 +13,15 @@ export const usuarioLogado = Login.user;
 
 export default function Login() {
 
-    const {signInGoogle ,signed} = useContext(AuthContext);
+    const {signInGoogle ,signed, signInEmail, errorDetected} = useContext(AuthContext);
 
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    function handleLogin(e) {
+        e.preventDefault();
+        signInEmail(email, password);
+    }
     
 
     async function handleSignInGoogle(){
@@ -24,14 +30,13 @@ export default function Login() {
 
     if (!signed ) {
         
-    
         return (
         <div className="bg-background bg-no-repeat flex   min-h-screen  ">
 
             <NavBar />
 
             <div className=' p-4 w-full my-auto bg-black/70 flex flex-col
-                            sm:flex-row sm:items-center sm:justify-around '>
+                sm:flex-row sm:items-center sm:justify-around '>
 
                 {/* Aba Lateral */}
                 <div className=' flex justify-center text-center '>
@@ -59,17 +64,15 @@ export default function Login() {
 
                 </div>
 
-
                 {/* Formulário */}
-
                 <div className=' flex flex-col  bg-slate-600/60 rounded-2xl p-4 sm:w-96'>
 
                     {/* Inputs */}
                     <div className=' flex flex-col '>
                         {/* E-mail */}
-                        <input  type="text" className='bg-black/70 rounded-xl mb-4 h-14 text-sm text-white sm:h-16 pl-4' placeholder={`Digite Seu e-mail`} />
+                        <input onChange={(e) => setEmail(e.target.value)} type="text" className='bg-black/70 rounded-xl mb-4 h-14 text-sm text-white sm:h-16 pl-4' placeholder={`Digite Seu e-mail`} />
                         {/* Senha */}
-                        <input  type="password" className='bg-black/70 rounded-xl  h-14 text-sm text-white sm:h-16 pl-4' placeholder=' Digite sua senha' />
+                        <input onChange={(e) => setPassword(e.target.value)}  type="password" className='bg-black/70 rounded-xl  h-14 text-sm text-white sm:h-16 pl-4' placeholder=' Digite sua senha' />
                         <p className='text-secondaryGreen font-bold'>Esqueci minha senha</p>
 
                     </div>
@@ -77,9 +80,10 @@ export default function Login() {
                     <div className='bg-secondaryGreen/80 w-5/6 rounded-lg flex justify-center
                                         text-2xl font-bold mx-auto py-2 mt-4'>
                         <Link>
-                            <button onClick={()=>{}}>Entrar</button>
+                            <button type='submit' onClick={handleLogin}>Entrar</button>
                         </Link>
                     </div>
+                    {errorDetected && <p className='text-red-500 text-center'>{errorDetected}</p>}
                     {/* Registre-se */}
                     <p className=' mt-4 flex justify-between  
                                 mx-auto font-bold text-white text-xs'>
@@ -111,14 +115,7 @@ export default function Login() {
 
                 </div>
 
-
-
             </div>
-
-
-
-
-
 
         </div>
         )
