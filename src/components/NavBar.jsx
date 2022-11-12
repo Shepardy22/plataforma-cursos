@@ -1,5 +1,3 @@
-import React, { useContext } from 'react';
-
 import Logo from '../assets/img/Logo.png';
 import {FaBars, FaWindowClose} from 'react-icons/fa';
 import {Link, useLocation} from 'react-router-dom';

@@ -2,7 +2,8 @@ import NavBarADM from "./NavBarADM";
 import { useState } from "react";
 
 import { db } from "../../services/firebaseConfig";
-import { collection, addDoc, deleteDoc, doc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
+import { Navigate } from "react-router-dom";
 
 // Funcionalidades ADM
 export default function AdmUser() {
@@ -41,6 +42,7 @@ export default function AdmUser() {
             descricao: descricao,
         }
         addDoc(userCollectionRefCursos, curso);
+        <Navigate to="/Carreiras" />
     }
 
 
