@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 
 import { Link, Navigate } from "react-router-dom";
 import { Typewriter } from 'react-simple-typewriter'

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {FaTimesCircle} from 'react-icons/fa'
 import {  useState, useEffect } from 'react';
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";

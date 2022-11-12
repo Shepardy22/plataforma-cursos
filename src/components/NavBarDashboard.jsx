@@ -1,4 +1,4 @@
-import React, {  useContext, useEffect, useState } from 'react';
+import React, {  useContext,  useState } from 'react';
 
 import Logo from '../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
@@ -35,7 +35,7 @@ export default function NavBarDashboard() {
                 <div className=' flex mx-auto w-full '>
                     <ul className='text-white hidden sm:flex w-full justify-around text-lg items-center'>
                         <li className='hover:text-primaryBlue '><Link to="/Dashboard">Home</Link></li>
-                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Bootcamps</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/Carreiras">Bootcamps</Link></li>
                         <li className='hover:text-primaryBlue '><Link to="/Dashboard">Salas</Link></li>
                         <li className='text-secondaryGreen hover:text-primaryBlue '><Link to="/Dashboard">Swap Pro</Link></li>
                         <li className='text-red-500 hover:text-primaryBlue font-bold '><Link to="/AdmUser">Área ADM</Link></li>
@@ -58,7 +58,7 @@ export default function NavBarDashboard() {
                                     <h1 className='text-white mt-4 hover:text-primaryBlue'>Minha Conta</h1>
                                 </Link>
 
-                                <Link to={'/Login'} >
+                                <Link to={"/"} >
                                     <button onClick={signOut} className='font-semibold h-6 mt-6  bg-primaryBlue
                                     hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-28 text-secondaryGreen '>
                                         Sair
@@ -117,8 +117,8 @@ export default function NavBarDashboard() {
                         <li className='mb-4  hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Minha Conta</Link></li>
 
                         <li className='mt-10 hover:text-primaryBlue text-xl  '>
-                            <Link to={'/Login'} >
-                                <button className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
+                            <Link to={"/"} >
+                                <button onClick={signOut} className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                     Sair
                                 </button>
                             </Link>

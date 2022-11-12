@@ -35,9 +35,9 @@ export default function NavBarADM() {
                 <div className=' flex mx-auto w-full '>
                     <ul className='text-white hidden sm:flex w-full justify-around text-lg items-center'>
                         <li className='hover:text-primaryBlue '><Link to="/Dashboard">Home</Link></li>
-                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Bootcamps</Link></li>
-                        <li className='hover:text-primaryBlue '><Link to="/Dashboard">Salas</Link></li>
-                        <li className='text-secondaryGreen hover:text-primaryBlue '><Link to="/Dashboard">Swap Pro</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/Carreiras">Cursos</Link></li>
+                        <li className='hover:text-primaryBlue '><Link to="/AdmUser">Configuraçoes</Link></li>
+                        <li className='text-secondaryGreen hover:text-primaryBlue '><Link to="/AdmUser">Usuarios</Link></li>
                         <li className='text-red-500 hover:text-primaryBlue font-bold '><Link to="/AdmUser">Área ADM</Link></li>
 
                         
@@ -58,7 +58,7 @@ export default function NavBarADM() {
                                     <h1 className='text-white mt-4 hover:text-primaryBlue'>Minha Conta</h1>
                                 </Link>
 
-                                <Link to={'/Login'} >
+                                <Link to={"/"} >
                                     <button onClick={signOut} className='font-semibold h-6 mt-6  bg-primaryBlue
                                     hover:bg-secondaryGreen hover:text-primaryBlue rounded-3xl w-28 text-secondaryGreen '>
                                         Sair
@@ -111,14 +111,14 @@ export default function NavBarADM() {
                             </div>
                         </li>
                         <li className='mb-4  hover:text-primaryBlue'><Link to="/" onClick={toggleMenu}>Home</Link></li>
-                        <li className='mb-4 hover:text-primaryBlue'> <Link to="/Carreiras" onClick={toggleMenu}>Bootcamps</Link></li>
-                        <li className='mb-4 hover:text-primaryBlue'> <Link to="/Metodologia" onClick={toggleMenu}>Salas</Link></li>
-                        <li className='mb-4 text-secondaryGreen hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Swap Pro</Link></li>
-                        <li className='mb-4  hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Minha Conta</Link></li>
+                        <li className='mb-4 hover:text-primaryBlue'> <Link to="/Carreiras" onClick={toggleMenu}>Cursos</Link></li>
+                        <li className='mb-4 hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Configuraçoes</Link></li>
+                        <li className='mb-4 text-secondaryGreen hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Usuarios</Link></li>
+                        <li className='mb-4  hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Minha Conta</Link></li>
 
                         <li className='mt-10 hover:text-primaryBlue text-xl  '>
-                            <Link to={'/Login'} >
-                                <button className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
+                            <Link to={"/"} >
+                                <button onClick={signOut} className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                     Sair
                                 </button>
                             </Link>
