@@ -1,13 +1,41 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {FaTimesCircle} from 'react-icons/fa'
 import {  useState, useEffect } from 'react';
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from '../../../services/firebaseConfig';
+import { Navigate } from 'react-router-dom';
 
 export default function Projetos() {
 
     const userCollectionRef = collection(db, "projetos");
     const [projetos, setProjetos] = useState([]);
+
+    const [createNewProject, setCreateNewProject] = useState(false);
+    const [nomeProjeto, setNomeProjeto] = useState("");
+    const [link, setLink] = useState("");
+
+
+    function handleCreateNewProject () {
+        setCreateNewProject(!createNewProject);
+    }
+    // Function create a new project
+    
+    
+    
+     function criarProjeto() {
+        const projeto = {
+            nomeProjeto: nomeProjeto,
+            link: link,
+        }
+        if(nomeProjeto === "" || link === ""){
+            alert(" Preencha todos os campos!");
+            return;
+        }
+        addDoc(userCollectionRef, projeto);
+        
+    }
+
+
 
     useEffect(() => {
         const getProjetos = async () => {
@@ -48,7 +76,34 @@ export default function Projetos() {
             ))}
 
             <div className="flex justify-end pr-12 ">
-                <button onClick={() => { }} className="h-12 bg-secondaryGreen rounded-lg
+                <div>
+                    {/* Adicionar Projetos Links */}
+                    {createNewProject && 
+                    <div className="border h-48 w-80 bg-black/80 ">
+                    <h2 className="text-white">Adicionar Projetos</h2>
+    
+                    <div className="flex flex-col  gap-2 p-2 text-black">
+                        <input type="text" placeholder="Nome do Projeto" 
+                        value={nomeProjeto} onChange={(e) =>setNomeProjeto(e.target.value)}/>
+                        <input type="text" placeholder="Link do Projeto" 
+                        value={link} onChange={(e) =>setLink(e.target.value)}/>
+                    </div>
+    
+                    <div className="h-12 w-24 bg-white/50 flex">
+                        <button onClick={criarProjeto}>
+                            Enviar projeto
+                        </button>
+                        
+                    </div>
+                    <h2 className='text-xs mt-2'>Troque de Aba para recarregar o Componente ao alterar alguma informação</h2>
+
+                </div>
+                    }
+                    
+            
+
+                </div>
+                <button onClick={handleCreateNewProject} className="h-12 bg-secondaryGreen rounded-lg
                  hover:bg-primaryBlue hover:text-secondaryGreen
                  text-black border border-primaryBlue font-bold
                  w-24 ">Adicionar</button>

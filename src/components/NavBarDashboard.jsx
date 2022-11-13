@@ -89,7 +89,7 @@ export default function NavBarDashboard() {
             {/* Menu Mobile */}
             <div className={`${showMenu ? '' : 'hidden'}
             z-50    
-            sm:hidden fixed top-0 right-0 w-8/12 h-4/6
+            sm:hidden fixed top-0 right-0 w-8/12 
            bg-black/90
             border border-secondaryGreen rounded-l-3xl
             flex justify-center`}>
@@ -117,9 +117,10 @@ export default function NavBarDashboard() {
                         <li className='mb-4 hover:text-primaryBlue'> <Link to="/Carreiras" onClick={toggleMenu}>Bootcamps</Link></li>
                         <li className='mb-4 hover:text-primaryBlue'> <Link to="/Metodologia" onClick={toggleMenu}>Salas</Link></li>
                         <li className='mb-4 text-secondaryGreen hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Swap Pro</Link></li>
+                        <li className='mb-4 text-red-500 hover:text-primaryBlue font-bold '><Link to="/AdmUser">Área ADM</Link></li>
                         <li className='mb-4  hover:text-primaryBlue'> <Link to="/Comunidade" onClick={toggleMenu}>Minha Conta</Link></li>
 
-                        <li className='mt-10 hover:text-primaryBlue text-xl  '>
+                        <li className='mt-10 hover:text-primaryBlue text-xl mb-4 '>
                             <Link to={"/"} >
                                 <button onClick={signOut} className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                     Sair
