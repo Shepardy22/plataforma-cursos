@@ -10,8 +10,11 @@ import NavBar from '../NavBar';
 
 import { db } from "../../services/firebaseConfig";
 import { collection, getDocs } from 'firebase/firestore';
+import NavBarDashboard from '../NavBarDashboard';
 
 export default function Carreiras() {
+
+    const userLogado = localStorage.getItem('@AuthFirebase:User');
 
     const userCollectionRef = collection(db, "cursos");
 
@@ -45,7 +48,8 @@ export default function Carreiras() {
 
         <div className="w-full  flex flex-col 
                 h-screen  ">
-                    <NavBar />
+                    {userLogado? <NavBarDashboard/> : <NavBar/> }
+                    
             
             <div className="flex justify-center  flex-col my-auto">
 

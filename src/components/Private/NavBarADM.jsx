@@ -89,7 +89,7 @@ export default function NavBarADM() {
             {/* Menu Mobile */}
             <div className={`${showMenu ? '' : 'hidden'}
             z-50    
-            sm:hidden fixed top-0 right-0 w-8/12 h-4/6
+            sm:hidden fixed top-0 right-0 w-8/12 
            bg-black/90
             border border-secondaryGreen rounded-l-3xl
             flex justify-center`}>
@@ -116,11 +116,10 @@ export default function NavBarADM() {
                         <li className='mb-4 hover:text-primaryBlue'> <Link to="/Carreiras" onClick={toggleMenu}>Cursos</Link></li>
                         <li className='mb-4 hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Configuraçoes</Link></li>
                         <li className='mb-4 text-secondaryGreen hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Usuarios</Link></li>
-                        <li className='mb-4  hover:text-primaryBlue'> <Link to="/AdmUser" onClick={toggleMenu}>Minha Conta</Link></li>
-
+                        <li className='mb-4 text-red-500 hover:text-primaryBlue font-bold '><Link to="/AdmUser">Área ADM</Link></li>
                         <li className='mt-10 hover:text-primaryBlue text-xl  '>
                             <Link to={"/"} >
-                                <button onClick={signOut} className='font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
+                                <button onClick={signOut} className='mb-4 font-semibold h-10 bg-primaryBlue rounded-3xl w-32 text-secondaryGreen '>
                                     Sair
                                 </button>
                             </Link>
