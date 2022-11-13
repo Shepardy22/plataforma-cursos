@@ -53,6 +53,7 @@ export default function Projetos() {
                  text-black border border-primaryBlue font-bold
                  w-24 ">Adicionar</button>
             </div>
+            <h2>Aqui o usuário Listará seus projetos finalizados com a comunidade</h2>
         </div>
     )
 }

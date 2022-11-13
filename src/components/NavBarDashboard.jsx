@@ -1,4 +1,5 @@
 import React, {  useContext,  useState } from 'react';
+import userFoto from '.././assets/img/user.png';
 
 import Logo from '../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
@@ -46,7 +47,8 @@ export default function NavBarDashboard() {
                             <span className='mr-4 mt-8'><FaBell /></span>
                             <button onClick={toggleMenuDesk}>
                                 <div className='rounded-full h-12 w-12  border border-primaryBlue'>
-                                    <img src={photoUser} alt="perfil" className='rounded-full ' />
+                                    {photoUser ? (<img src={photoUser} alt="perfil" className='rounded-full ' />):
+                                    (<img src={userFoto} alt="Foto " className='rounded-full bg-white' />)}
                                 </div>
                             </button>
 
@@ -107,7 +109,8 @@ export default function NavBarDashboard() {
                     <ul className='text-white mt-20  text-3xl text-center '>
                         <li className='flex justify-center -mt-8 mb-6'>
                             <div className='rounded-full h-16 w-16  border border-primaryBlue'>
-                                <img src="https://avatars.githubusercontent.com/u/102148711?v=4" alt="Foto de perfil" className='rounded-full ' />
+                            {photoUser ? (<img src={photoUser} alt="perfil" className='rounded-full ' />):
+                                    (<img src={userFoto} alt="Foto " className='rounded-full bg-white' />)}
                             </div>
                         </li>
                         <li className='mb-4  hover:text-primaryBlue'><Link to="/" onClick={toggleMenu}>Home</Link></li>

@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import userFoto from '../../assets/img/user.png';
 import NavBarDashboard from "../NavBarDashboard";
 import Projetos from "../Private/subMenuHome/Projetos";
 import Perfil from "../Private/subMenuHome/Perfil";
@@ -14,14 +15,14 @@ import { collection } from "firebase/firestore";
 export default function Dashboard() {
 
     const userCollectionRef = collection(db, "users");
- 
-    const {user} = useContext(AuthContext);
-    
 
-    const photoUser =localStorage.getItem("@AuthFirebase:Photo");
+    const { user } = useContext(AuthContext);
 
-    
-    
+
+    const photoUser = localStorage.getItem("@AuthFirebase:Photo");
+
+
+
     const [xp, setXp] = useState(463);
     const [xpMaximo, setXpMaximo] = useState(1245);
     const [nivel, setNivel] = useState(9);
@@ -57,11 +58,12 @@ export default function Dashboard() {
 
                         <div className="bg-black/80  rounded-xl flex flex-col items-center h-full ">
 
-                            <div className="h-24 w-24   mt-16">
-                                {photoUser && <img src={photoUser} alt="Foto de perfil" className='rounded-full ' />}
+                            <div className="h-24 w-24   mt-16 border rounded-full">
+                                {photoUser ? (<img src={photoUser} alt="Foto de perfil" className='rounded-full ' />) :
+                                    (<img src={userFoto} alt="Foto " className='rounded-full bg-white' />)}
                             </div>
 
-                            <h1 className="text-white pt-4 text-xl">{user.displayName}</h1>
+                            <h1 className="text-white pt-4 text-xl">{user.displayName ? user.displayName : 'Nome Usuário'}</h1>
 
                             {/* Nivel Perfil */}
                             <div className=" flex flex-col items-center w-full p-2 ">
@@ -74,7 +76,7 @@ export default function Dashboard() {
                                         <span className="text-primaryBlue italic font-semibold flex text-sm">{xp}/{xpMaximo}</span>
                                         <span className="text-secondaryGreen ml-6 font-extrabold">Nível {nivel}</span>
                                     </div>
-                                        {/* progressBar */}
+                                    {/* progressBar */}
                                     <div className={`w-full bg-gray-200  mb-4 dark:bg-gray-700 rounded-2xl `}>
                                         <div className={`w-full`}>
                                             <div className={`bg-secondaryGreen italic text-xs text-transparent rounded-2xl h-3`}
@@ -104,6 +106,7 @@ export default function Dashboard() {
                                             <FaJava className="text-secondaryGreen text-3xl" />
 
                                         </div>
+                                        <h2 className='text-white mt-6'>Aqui será exibido insígnias de conquistas realizadas durante os cursos</h2>
                                     </div>
                                 </div>
                             </div>
@@ -138,7 +141,7 @@ export default function Dashboard() {
                             <div className="text-white  ">
                                 {subMenu === "Perfil" && <Perfil />}
                                 {subMenu === "Habilidades" && <Habilidades />}
-                                {subMenu === "Projetos" && <Projetos />}   
+                                {subMenu === "Projetos" && <Projetos />}
                             </div>
 
                         </div>
