@@ -1,4 +1,5 @@
 import React, {  useContext, useState } from 'react';
+import userFoto from '../../assets/img/user.png';
 
 import Logo from '../../assets/img/Logo.png';
 import { FaBars, FaBell, FaWindowClose } from 'react-icons/fa';
@@ -46,7 +47,8 @@ export default function NavBarADM() {
                             <span className='mr-4 mt-8'><FaBell /></span>
                             <button onClick={toggleMenuDesk}>
                                 <div className='rounded-full h-12 w-12  border border-primaryBlue'>
-                                    <img src={photoUser} alt="Foto de perfil" className='rounded-full ' />
+                                    {photoUser ? (<img src={photoUser} alt="Perfil" className='rounded-full ' />) :
+                                        (<img src={userFoto} alt="Foto " className='rounded-full bg-white' />)}
                                 </div>
                             </button>
 

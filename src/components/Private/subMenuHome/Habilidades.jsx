@@ -40,6 +40,9 @@ export default function Habilidades() {
                 nivel={12}
                 title={"React"}
             />
+            <h2>Aqui o Usuário poderá visualizar sua Habilidades adquiridas durante os cursos de acordo com o nivel de dificuldade,
+                a cada nivel serão desbloqueados novos cursos e desafios.
+            </h2>
             <h1 className="text-white flex justify-end mr-6 italic text-sm font-bold mb-2">
                 <Link>Saber mais sobre Níveis e Habilidades</Link>
             </h1>

@@ -9,7 +9,8 @@ export default function Inventario() {
                 {itens.map((item) => (
                     <Insignia key={item} item={item}/>
                 ))}   
-           
+           <h2 className="mt-6">Aqui será Exibido Itens ganhos durante os cursos, eventos e testes de conhecimento. 
+                Usados na forja para gerar insígnias e desbloquear novos módulos</h2>
           </div>
     )
 }
